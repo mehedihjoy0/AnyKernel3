@@ -1,5 +1,5 @@
 #!/sbin/sh
-# AnyKernel3 Backend (DO NOT CHANGE)
+# A kernel Backend (DO NOT CHANGE)
 # osm0sis @ xda-developers
 
 export OUTFD=$2;
@@ -273,7 +273,7 @@ debugging() {
   if [ "$debug" ]; then
     ui_print " " "Creating debugging archive in $DIR...";
     [ -f /tmp/recovery.log ] && log=/tmp/recovery.log;
-    tar -czf "$DIR/anykernel3-$(date +%Y-%m-%d_%H%M%S)-debug.tgz" $AKHOME $log;
+    tar -czf "$DIR/A kernel-$(date +%Y-%m-%d_%H%M%S)-debug.tgz" $AKHOME $log;
   fi;
 }
 cleanup() {
@@ -398,7 +398,7 @@ id=ak3-helper
 name=AK3 Helper Module
 version=$(awk '{ print $3 }' $AKHOME/vertmp) $(grep -oE '#.[0-9]' $AKHOME/vertmp)
 versionCode=1
-author=AnyKernel3
+author=A kernel
 description=$KERNEL_STRING
 EOF
 }
@@ -551,7 +551,7 @@ if [ -f version ]; then
   ui_printfile version;
   ui_print " ";
 fi;
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " ";
+ui_print " " "By--> mehedihjoy0 @ xda-developers" " ";
 grep -oE 'AK_BASE.*' META-INF/com/google/android/updater-script >&2;
 ui_print " ";
 
